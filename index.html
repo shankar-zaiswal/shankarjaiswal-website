@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shankar Jaiswal | Data Analyst · Founder of Klipnexa</title>
+<meta name="description" content="Shankar Jaiswal is a Data Analyst turning data into decisions, and the founder of Klipnexa, a bulk video creation software and service.">
+<meta name="author" content="Shankar Jaiswal">
+<meta property="og:title" content="Shankar Jaiswal | Data Analyst · Founder of Klipnexa">
+<meta property="og:description" content="Data Analyst turning data into decisions. Founder of Klipnexa, bulk video creation software and service.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shankarjaiswal.com.np/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+<!--
+  HOW TO EDIT THIS FILE
+  1. Every section is wrapped in comments: START: name ... END: name
+  2. To REMOVE a section: delete everything from its START to END comment,
+     and delete its link inside the NAV list (search for  href="#name").
+  3. Text to change is marked with  EDIT:  comments or [square brackets].
+  4. Colors can be changed in the :root block below.
+-->
+
+<style>
+:root{
+  --bg:#0b1220; --bg2:#101a2e; --card:#14213a; --text:#e8edf6; --muted:#9aa8c3;
+  --accent:#2dd4bf; --accent2:#f59e0b; --line:#22304d; --radius:16px;
+}
+:root[data-theme="light"]{
+  --bg:#f6f8fc; --bg2:#ffffff; --card:#ffffff; --text:#0f1a2e; --muted:#51607c;
+  --accent:#0d9488; --accent2:#d97706; --line:#dbe3f0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.2}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+section{padding:90px 0}
+.alt{background:var(--bg2)}
+.eyebrow{color:var(--accent);font-weight:600;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:14px}
+.lead{color:var(--muted);max-width:680px;margin-bottom:40px}
+
+/* NAV */
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-family:'Space Grotesk';font-weight:700;font-size:1.15rem}
+.logo span{color:var(--accent)}
+nav ul{display:flex;gap:22px;list-style:none;align-items:center}
+nav a{color:var(--muted);font-size:.92rem;font-weight:500;transition:.2s}
+nav a:hover{color:var(--accent)}
+.icon-btn{background:none;border:1px solid var(--line);color:var(--text);width:38px;height:38px;border-radius:10px;cursor:pointer;font-size:1rem}
+.menu-btn{display:none}
+@media(max-width:860px){
+  .menu-btn{display:inline-block}
+  nav ul{position:absolute;top:66px;left:0;right:0;background:var(--bg2);flex-direction:column;padding:20px;gap:16px;border-bottom:1px solid var(--line);display:none}
+  nav ul.open{display:flex}
+}
+
+/* BUTTONS */
+.btn{display:inline-block;padding:13px 24px;border-radius:12px;font-weight:600;font-size:.95rem;border:1px solid transparent;cursor:pointer;transition:.2s;font-family:inherit}
+.btn-primary{background:var(--accent);color:#04201c}
+.btn-primary:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.btn-ghost{border-color:var(--line);color:var(--text)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+/* HERO */
+.hero{padding-top:150px;min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:520px;height:520px;right:-120px;top:60px;background:radial-gradient(circle,color-mix(in srgb,var(--accent) 28%,transparent),transparent 65%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:50px;align-items:center;position:relative}
+.tag{display:inline-block;border:1px solid var(--line);padding:6px 14px;border-radius:99px;font-size:.82rem;color:var(--muted);margin-bottom:22px}
+.tag b{color:var(--accent2)}
+.hero h1{font-size:clamp(2.4rem,6vw,4rem);margin-bottom:10px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.role{font-size:1.2rem;color:var(--muted);margin-bottom:20px}
+.hero p.intro{color:var(--muted);max-width:540px;margin-bottom:30px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.photo{aspect-ratio:4/5;border-radius:24px;border:1px solid var(--line);background:linear-gradient(160deg,var(--card),var(--bg2));display:flex;align-items:center;justify-content:center;overflow:hidden;max-width:380px;margin-left:auto}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo .ph{font-family:'Space Grotesk';font-size:5rem;color:var(--accent);opacity:.6}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.photo{margin:0 auto;max-width:280px;order:-1}}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:70px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-align:center}
+.stat b{display:block;font-family:'Space Grotesk';font-size:2rem;color:var(--accent)}
+.stat span{color:var(--muted);font-size:.88rem}
+@media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* GRIDS & CARDS */
+.grid{display:grid;gap:22px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:860px){.g3,.g2{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:var(--accent)}
+.card .ico{font-size:1.8rem;margin-bottom:12px}
+.card h3{font-size:1.15rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.95rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{font-size:.78rem;padding:4px 12px;border-radius:99px;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent);font-weight:500}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:50px}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr}}
+.about-grid p{color:var(--muted);margin-bottom:16px}
+.quote{border-left:3px solid var(--accent);padding:6px 0 6px 20px;margin-top:24px;font-style:italic}
+
+/* TIMELINE */
+.timeline{border-left:2px solid var(--line);margin-left:8px}
+.job{position:relative;padding:0 0 38px 30px}
+.job::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.job .date{color:var(--accent2);font-size:.85rem;font-weight:600}
+.job h3{font-size:1.2rem;margin:4px 0}
+.job .org{color:var(--muted);font-size:.95rem;margin-bottom:8px}
+.job ul{color:var(--muted);padding-left:18px;font-size:.95rem}
+
+/* KLIPNEXA */
+.klip{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 12%,var(--bg2)),var(--bg2) 60%)}
+.klip-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.badge{background:var(--accent2);color:#2a1700;font-size:.75rem;font-weight:700;padding:4px 12px;border-radius:99px;letter-spacing:.05em}
+.klip .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:40px 0}
+@media(max-width:860px){.klip .flow{grid-template-columns:1fr 1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;text-align:center}
+.step b{display:block;font-family:'Space Grotesk';font-size:1.6rem;color:var(--accent2)}
+.step span{color:var(--muted);font-size:.9rem}
+
+/* SKILLS */
+.skill{margin-bottom:18px}
+.skill .row{display:flex;justify-content:space-between;font-size:.92rem;margin-bottom:6px}
+.bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:99px}
+
+/* INSIGHTS */
+.post small{color:var(--accent2);font-weight:600}
+.post a.more{color:var(--accent);font-weight:600;font-size:.9rem;display:inline-block;margin-top:12px}
+
+/* CONTACT */
+form{display:grid;gap:14px}
+input,textarea,select{width:100%;padding:13px 16px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--text);font:inherit}
+input:focus,textarea:focus,select:focus{outline:2px solid var(--accent);border-color:transparent}
+textarea{min-height:130px;resize:vertical}
+.contact-list{list-style:none;display:grid;gap:14px;margin-top:20px}
+.contact-list li{color:var(--muted)}
+.contact-list b{color:var(--text);display:block;font-size:.85rem}
+.contact-list a:hover{color:var(--accent)}
+
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:.9rem}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+.reveal{opacity:0;transform:translateY(24px);transition:.7s}
+.reveal.show{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<!-- To remove a section, also delete its link here -->
+<header>
+  <div class="wrap nav">
+    <a href="#home" class="logo">Shankar<span>.</span>Jaiswal</a>
+    <nav>
+      <ul id="menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#klipnexa">Klipnexa</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#contact" class="btn btn-primary" style="padding:8px 18px;color:#04201c">Contact</a></li>
+        <li><button class="icon-btn" id="theme" aria-label="Toggle theme">☾</button></li>
+      </ul>
+    </nav>
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ START: HERO ============ -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="tag">📍 Nepal &nbsp;·&nbsp; <b>Founder of Klipnexa</b></div>
+        <h1>Shankar <em>Jaiswal</em></h1>
+        <p class="role">Data Analyst · Dashboards · Insights · Automation</p>
+        <!-- EDIT: write your own one-paragraph intro -->
+        <p class="intro">I turn raw data into clear decisions. From cleaning messy datasets to building dashboards that leaders actually use, I help businesses see what is happening and what to do next. I am also building Klipnexa, a platform for creating videos in bulk.</p>
+        <div class="cta">
+          <a href="#contact" class="btn btn-primary">Work with me</a>
+          <a href="#klipnexa" class="btn btn-ghost">Explore Klipnexa</a>
+          <a href="https://www.linkedin.com/in/shankarjaiswal" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
+        </div>
+      </div>
+      <div class="photo">
+        <!-- EDIT: upload your photo as photo.jpg next to index.html, then replace the next line with:
+             <img src="photo.jpg" alt="Shankar Jaiswal"> -->
+        <div class="ph">SJ</div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <!-- EDIT: replace with your real numbers -->
+      <div class="stat"><b>[X]+</b><span>Years of experience</span></div>
+      <div class="stat"><b>[X]+</b><span>Dashboards built</span></div>
+      <div class="stat"><b>[X]+</b><span>Projects delivered</span></div>
+      <div class="stat"><b>1</b><span>Company founded: Klipnexa</span></div>
+    </div>
+  </div>
+</section>
+<!-- ============ END: HERO ============ -->
+
+
+<!-- ============ START: ABOUT ============ -->
+<section id="about" class="alt">
+  <div class="wrap about-grid reveal">
+    <div>
+      <div class="eyebrow">Who I am</div>
+      <h2>About me</h2>
+      <!-- EDIT: replace with your own story (copy from your LinkedIn About section) -->
+      <p>I am a Data Analyst who enjoys finding the story hidden inside numbers. My work covers data cleaning, analysis, reporting and dashboards, so that teams can replace guesswork with evidence.</p>
+      <p>[Add 2 to 3 sentences about your background, the industries you worked in, and what you are proud of.]</p>
+      <p>Alongside analytics, I am building <strong style="color:var(--text)">Klipnexa</strong>, a software and service company focused on creating videos in bulk, for businesses, creators and agencies who need volume without losing quality.</p>
+      <div class="quote">Good data answers questions. Great analysis tells you which questions to ask.</div>
+    </div>
+    <div class="grid">
+      <div class="card"><div class="ico">📊</div><h3>Data-driven</h3><p>Every recommendation backed by numbers and clear visuals.</p></div>
+      <div class="card"><div class="ico">🚀</div><h3>Builder mindset</h3><p>I like turning ideas into working products and services.</p></div>
+    </div>
+  </div>
+</section>
+<!-- ============ END: ABOUT ============ -->
+
+
+<!-- ============ START: EXPERTISE ============ -->
+<section id="expertise">
+  <div class="wrap reveal">
+    <div class="eyebrow">What I offer</div>
+    <h2>Core expertise</h2>
+    <p class="lead">The data work I do best, from raw files to decisions.</p>
+    <div class="grid g3">
+      <div class="card"><div class="ico">🧹</div><h3>Data Cleaning & Preparation</h3><p>Turning messy spreadsheets and exports into reliable, analysis-ready datasets.</p></div>
+      <div class="card"><div class="ico">📈</div><h3>Dashboards & Reporting</h3><p>Interactive dashboards and automated reports for managers and leadership.</p></div>
+      <div class="card"><div class="ico">🔎</div><h3>Business Analysis</h3><p>Finding trends, problems and opportunities in sales, operations and customer data.</p></div>
+      <div class="card"><div class="ico">🗄️</div><h3>SQL & Databases</h3><p>Querying, joining and modelling data so the numbers are always trustworthy.</p></div>
+      <div class="card"><div class="ico">⚙️</div><h3>Automation</h3><p>Reducing repetitive reporting work with scripts, formulas and workflows.</p></div>
+      <div class="card"><div class="ico">🤖</div><h3>AI for Analytics</h3><p>Using AI tools to speed up analysis, documentation and content creation.</p></div>
+    </div>
+  </div>
+</section>
+<!-- ============ END: EXPERTISE ============ -->
+
+
+<!-- ============ START: EXPERIENCE ============ -->
+<section id="experience" class="alt">
+  <div class="wrap reveal">
+    <div class="eyebrow">Career</div>
+    <h2>Professional journey</h2>
+    <p class="lead">Copy the details from your LinkedIn Experience section. Duplicate a "job" block for each role.</p>
+    <div class="timeline">
+
+      <div class="job">
+        <div class="date">[Start] – Present</div>
+        <h3>Data Analyst</h3>
+        <div class="org">[Company name]</div>
+        <ul>
+          <li>[Achievement with a number, e.g. built a sales dashboard used by 20+ managers]</li>
+          <li>[Achievement 2]</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="date">Present</div>
+        <h3>Founder</h3>
+        <div class="org">Klipnexa</div>
+        <ul>
+          <li>Building a software and service for bulk video creation.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="date">[Start] – [End]</div>
+        <h3>[Previous role]</h3>
+        <div class="org">[Company name]</div>
+        <ul><li>[Achievement]</li></ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ============ END: EXPERIENCE ============ -->
+
+
+<!-- ============ START: PROJECTS ============ -->
+<section id="projects">
+  <div class="wrap reveal">
+    <div class="eyebrow">Work</div>
+    <h2>Projects</h2>
+    <p class="lead">A few examples of analysis and products I have worked on.</p>
+    <div class="grid g3">
+      <!-- EDIT: replace each card with a real project; add a link if you have one -->
+      <div class="card">
+        <div class="ico">📊</div><h3>[Project name 1]</h3>
+        <p>[One or two lines: the problem, what you did, and the result.]</p>
+        <div class="chips"><span class="chip">Power BI</span><span class="chip">SQL</span></div>
+      </div>
+      <div class="card">
+        <div class="ico">🧾</div><h3>[Project name 2]</h3>
+        <p>[One or two lines: the problem, what you did, and the result.]</p>
+        <div class="chips"><span class="chip">Excel</span><span class="chip">Python</span></div>
+      </div>
+      <div class="card">
+        <div class="ico">🎬</div><h3>Klipnexa</h3>
+        <p>Bulk video creation software and service. Currently in development.</p>
+        <div class="chips"><span class="chip">AI</span><span class="chip">Video</span><span class="chip">Automation</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ END: PROJECTS ============ -->
+
+
+<!-- ============ START: KLIPNEXA ============ -->
+<section id="klipnexa" class="klip">
+  <div class="wrap reveal">
+    <div class="klip-head">
+      <div class="eyebrow" style="margin:0">My company</div>
+      <span class="badge">COMING SOON</span>
+    </div>
+    <h2>Klipnexa: videos at scale</h2>
+    <p class="lead">Klipnexa is a bulk video creation software and service. Make dozens or hundreds of on-brand videos from one template and one spreadsheet, instead of editing each one by hand.</p>
+
+    <div class="flow">
+      <div class="step"><b>1</b><span>Pick a template or brand style</span></div>
+      <div class="step"><b>2</b><span>Upload data, text, images or clips</span></div>
+      <div class="step"><b>3</b><span>Generate videos in bulk</span></div>
+      <div class="step"><b>4</b><span>Download or publish</span></div>
+    </div>
+
+    <div class="grid g3">
+      <div class="card"><div class="ico">🧩</div><h3>Software</h3><p>A self-serve tool where you build a template once and produce many videos from a data file.</p></div>
+      <div class="card"><div class="ico">🛎️</div><h3>Done-for-you service</h3><p>Send us your content and brand. We deliver finished videos in bulk, ready to post.</p></div>
+      <div class="card"><div class="ico">🎯</div><h3>Built for</h3><p>Agencies, e-commerce stores, educators, real estate, social media managers and marketers.</p></div>
+    </div>
+    <!-- EDIT: when your Klipnexa website is ready, put its link below -->
+    <div class="cta" style="margin-top:34px">
+      <a href="#contact" class="btn btn-primary">Join the waitlist / Enquire</a>
+      <!-- <a href="https://klipnexa.com" class="btn btn-ghost">Visit Klipnexa ↗</a> -->
+    </div>
+  </div>
+</section>
+<!-- ============ END: KLIPNEXA ============ -->
+
+
+<!-- ============ START: SKILLS ============ -->
+<section id="skills" class="alt">
+  <div class="wrap reveal">
+    <div class="eyebrow">Toolbox</div>
+    <h2>Skills & tools</h2>
+    <p class="lead">Adjust the percentages (the width values) to match your real level.</p>
+    <div class="grid g2" style="gap:50px">
+      <div>
+        <div class="skill"><div class="row"><span>Excel / Google Sheets</span><span>90%</span></div><div class="bar"><i style="width:90%"></i></div></div>
+        <div class="skill"><div class="row"><span>SQL</span><span>80%</span></div><div class="bar"><i style="width:80%"></i></div></div>
+        <div class="skill"><div class="row"><span>Power BI / Tableau</span><span>80%</span></div><div class="bar"><i style="width:80%"></i></div></div>
+        <div class="skill"><div class="row"><span>Python (pandas)</span><span>70%</span></div><div class="bar"><i style="width:70%"></i></div></div>
+      </div>
+      <div>
+        <div class="skill"><div class="row"><span>Data Visualization</span><span>85%</span></div><div class="bar"><i style="width:85%"></i></div></div>
+        <div class="skill"><div class="row"><span>Statistics</span><span>70%</span></div><div class="bar"><i style="width:70%"></i></div></div>
+        <div class="skill"><div class="row"><span>AI tools (Claude, ChatGPT)</span><span>85%</span></div><div class="bar"><i style="width:85%"></i></div></div>
+        <div class="skill"><div class="row"><span>Video & content workflow</span><span>65%</span></div><div class="bar"><i style="width:65%"></i></div></div>
+      </div>
+    </div>
+    <div class="chips" style="margin-top:34px">
+      <span class="chip">Data Cleaning</span><span class="chip">ETL</span><span class="chip">KPI Reporting</span><span class="chip">Data Modelling</span><span class="chip">A/B Analysis</span><span class="chip">Automation</span>
+    </div>
+  </div>
+</section>
+<!-- ============ END: SKILLS ============ -->
+
+
+<!-- ============ START: INSIGHTS ============ -->
+<!-- Your old Blogspot posts can be re-written here as short cards. Duplicate a card per post. -->
+<section id="insights">
+  <div class="wrap reveal">
+    <div class="eyebrow">Thoughts</div>
+    <h2>Insights</h2>
+    <p class="lead">Short notes on data, analytics and building a company.</p>
+    <div class="grid g3">
+      <div class="card post">
+        <small>[Month Year]</small>
+        <h3 style="margin:8px 0">[Article title]</h3>
+        <p>[Two-line summary of the post.]</p>
+        <a class="more" href="#">Read more →</a>
+      </div>
+      <div class="card post">
+        <small>[Month Year]</small>
+        <h3 style="margin:8px 0">[Article title]</h3>
+        <p>[Two-line summary of the post.]</p>
+        <a class="more" href="#">Read more →</a>
+      </div>
+      <div class="card post">
+        <small>[Month Year]</small>
+        <h3 style="margin:8px 0">Why I started Klipnexa</h3>
+        <p>[Write a short story about why you are building a bulk video platform.]</p>
+        <a class="more" href="#">Read more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ END: INSIGHTS ============ -->
+
+
+<!-- ============ START: CONTACT ============ -->
+<section id="contact" class="alt">
+  <div class="wrap reveal">
+    <div class="eyebrow">Let's talk</div>
+    <h2>Get in touch</h2>
+    <p class="lead">Need data analysis, a dashboard, or bulk videos for your business? Send a message.</p>
+    <div class="grid g2" style="gap:50px">
+      <div>
+        <!-- EDIT: put your real email, phone and links -->
+        <ul class="contact-list">
+          <li><b>Email</b><a href="mailto:YOUR_EMAIL@gmail.com">YOUR_EMAIL@gmail.com</a></li>
+          <li><b>Phone / WhatsApp</b><a href="https://wa.me/977XXXXXXXXXX">+977 XXXXXXXXXX</a></li>
+          <li><b>Location</b>Nepal</li>
+          <li><b>LinkedIn</b><a href="https://www.linkedin.com/in/shankarjaiswal" target="_blank" rel="noopener">linkedin.com/in/shankarjaiswal</a></li>
+        </ul>
+      </div>
+      <!-- EDIT: replace YOUR_FORM_ID after creating a free form at formspree.io (see setup steps) -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <select name="service">
+          <option>Data Analysis / Dashboard</option>
+          <option>Klipnexa: Bulk Video Service</option>
+          <option>Klipnexa: Software Waitlist</option>
+          <option>General Inquiry</option>
+        </select>
+        <textarea name="message" placeholder="Tell me what you need" required></textarea>
+        <button class="btn btn-primary" type="submit">Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- ============ END: CONTACT ============ -->
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© <span id="yr"></span> Shankar Jaiswal. All rights reserved.</div>
+    <div>Data Analyst · Founder of Klipnexa</div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  const menu=document.getElementById('menu');
+  document.getElementById('menuBtn').onclick=()=>menu.classList.toggle('open');
+  menu.querySelectorAll('a').forEach(a=>a.onclick=()=>menu.classList.remove('open'));
+
+  // Theme toggle (remembered)
+  const root=document.documentElement, tbtn=document.getElementById('theme');
+  try{const s=localStorage.getItem('theme'); if(s) root.setAttribute('data-theme',s);}catch(e){}
+  const sync=()=>tbtn.textContent=root.getAttribute('data-theme')==='light'?'☀':'☾';
+  sync();
+  tbtn.onclick=()=>{
+    const next=root.getAttribute('data-theme')==='light'?'dark':'light';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+    sync();
+  };
+
+  // Year
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  // Scroll reveal
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
