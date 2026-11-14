@@ -161,6 +161,25 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
 .training-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
 .training-list span{padding:8px 13px;border:1px solid var(--line);border-radius:99px;color:var(--muted);font-size:.88rem}
 @media(max-width:600px){section{padding:68px 0}.hero{padding-top:120px}.stats{margin-top:42px}}
+
+/* Featured portfolio projects */
+.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.project-card{position:relative;display:flex;flex-direction:column;min-height:280px;padding:26px;background:var(--card);border:1px solid var(--line);border-radius:18px;transition:transform .25s,border-color .25s,box-shadow .25s}
+.project-card:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 18px 40px rgba(0,0,0,.16)}
+.project-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.project-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--bg2);font-size:1.5rem}
+.project-type{font-size:.72rem;letter-spacing:.13em;font-weight:700;color:var(--accent);border:1px solid var(--line);border-radius:99px;padding:6px 10px}
+.project-card h3{font-size:1.2rem;margin-bottom:10px}
+.project-card p{color:var(--muted);font-size:.94rem;margin-bottom:18px}
+.project-card .chips{margin-top:auto;margin-bottom:18px}
+.project-link{display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid var(--line);font-weight:700;color:var(--accent);font-size:.92rem}
+.project-link span{font-size:1.2rem;transition:transform .2s}
+.project-link:hover span{transform:translate(3px,-3px)}
+.projects-footer{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:30px;padding:22px 24px;border:1px solid var(--line);border-radius:16px;background:var(--bg2)}
+.projects-footer p{color:var(--muted)}
+@media(max-width:700px){.project-grid{grid-template-columns:1fr}.projects-footer{align-items:flex-start;flex-direction:column}}
+
+.photo img{width:100%;height:100%;object-fit:cover;object-position:center;border-radius:inherit}
 </style>
 </head>
 <body>
@@ -203,8 +222,6 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
 </div>
 </div>
 <div class="photo">
-<!-- EDIT: upload your photo as photo.jpg next to index.html, then replace the next line with:
-             <img src="photo.jpg" alt="Shankar Jaiswal"> -->
 <img src="photo.jpg" alt="Hari Shankar Jaiswal">
 </div>
 </div>
@@ -265,12 +282,19 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
 </section>
 <!-- ============ END: EXPERIENCE ============ -->
 <!-- ============ START: PROJECTS ============ -->
-<section id="projects">
+<section id="projects" class="alt">
 <div class="wrap reveal">
-<div class="eyebrow">Work</div>
-<h2>Projects</h2>
-<p class="lead">Selected areas of work and professional capability. Specific project metrics can be added as they become available.</p>
-<div class="grid g3"><div class="card"><div class="ico">📊</div><h3>Power BI Reporting</h3><p>Interactive dashboards and reports to visualise business performance and support decision-making.</p><div class="chips"><span class="chip">Power BI</span><span class="chip">Data Visualisation</span></div></div><div class="card"><div class="ico">🗄️</div><h3>SQL &amp; Data Analysis</h3><p>Data extraction, manipulation and analysis to turn business data into useful information.</p><div class="chips"><span class="chip">SQL</span><span class="chip">Query Writing</span></div></div><div class="card"><div class="ico">🎬</div><h3>Klipnexa</h3><p>A bulk video creation software and service concept being developed alongside my analytics career.</p><div class="chips"><span class="chip">Automation</span><span class="chip">Video</span></div></div></div>
+<div class="eyebrow">Portfolio · Selected work</div>
+<h2>Projects that turn data into decisions</h2>
+<p class="lead">A selection of hands-on analytics projects built to explore business performance, identify trends and communicate insights through dashboards and reports.</p>
+<div class="project-grid">
+  <article class="project-card"><div class="project-top"><span class="project-icon">💹</span><span class="project-type">POWER BI</span></div><h3>Finance Analytics Dashboard</h3><p>Interactive finance analytics dashboard focused on financial performance, KPI tracking and business insights.</p><div class="chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query</span></div><a class="project-link" href="https://github.com/shankar-jaiswal/powerbi-finance-analysis" target="_blank" rel="noopener">Explore project <span>↗</span></a></article>
+  <article class="project-card"><div class="project-top"><span class="project-icon">👥</span><span class="project-type">POWER BI</span></div><h3>HR Analytics Dashboard</h3><p>Explore employee attrition, workforce trends, salary impact, job satisfaction and departmental insights.</p><div class="chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query</span></div><a class="project-link" href="https://github.com/shankar-jaiswal/HR-Analytics-PowerBI-Dashboard" target="_blank" rel="noopener">Explore project <span>↗</span></a></article>
+  <article class="project-card"><div class="project-top"><span class="project-icon">🚗</span><span class="project-type">POWER BI</span></div><h3>Car Sales Analytics</h3><p>Analyse sales performance, vehicle trends, dealer performance and key business KPIs to support data-driven decisions.</p><div class="chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query</span></div><a class="project-link" href="https://github.com/shankar-jaiswal/Car-Sales-Analytics-PowerBI-Dashboard" target="_blank" rel="noopener">Explore project <span>↗</span></a></article>
+  <article class="project-card"><div class="project-top"><span class="project-icon">🏥</span><span class="project-type">POWER BI</span></div><h3>Hospital Emergency Room Analytics</h3><p>Analyse patient flow, wait times, admissions, referrals, satisfaction scores and operational performance.</p><div class="chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query</span></div><a class="project-link" href="https://github.com/shankar-jaiswal/Hospital-Emergency-Room-Analytics-PowerBI" target="_blank" rel="noopener">Explore project <span>↗</span></a></article>
+  <article class="project-card"><div class="project-top"><span class="project-icon">📊</span><span class="project-type">EXCEL</span></div><h3>Sales &amp; Profit Dashboard</h3><p>Excel dashboard analysing sales performance, customer insights, regional trends and profitability.</p><div class="chips"><span class="chip">Excel</span><span class="chip">Power Query</span><span class="chip">Power Pivot</span></div><a class="project-link" href="https://github.com/shankar-jaiswal/Sales-Profit-Excel-Dashboard" target="_blank" rel="noopener">Explore project <span>↗</span></a></article>
+</div>
+<div class="projects-footer"><p>Want to explore the code, project files and documentation?</p><a class="btn btn-primary" href="https://github.com/shankar-jaiswal?tab=repositories" target="_blank" rel="noopener">View all GitHub repositories ↗</a></div>
 </div>
 </section>
 <!-- ============ END: PROJECTS ============ -->
